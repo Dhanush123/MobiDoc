@@ -34,8 +34,6 @@ import clarifai2.dto.model.output.ClarifaiOutput;
 import clarifai2.dto.prediction.Prediction;
 import okhttp3.OkHttpClient;
 
-import static android.R.attr.name;
-
 public class ResultsActivity extends AppCompatActivity {
 
     List<ClarifaiOutput<Prediction>> predictionResults;
@@ -93,13 +91,13 @@ public class ResultsActivity extends AppCompatActivity {
         else {
             result = "";
             String lastCat = prefs.getString("lastCat", "1.00%");
-            result = result + "Chance of " + name + ":\n" + lastCat + "%\n";
+            result = result + "Chance of Cataract" + ":\n" + lastCat + "%\n";
             String lastVit = prefs.getString("lastVit", "1.00%");
-            result = result + "Chance of " + name + ":\n" + lastVit + "%\n";
+            result = result + "Chance of Red Eyes" + ":\n" + lastVit + "%\n";
             String lastRed = prefs.getString("lastRed", "1.00%");
-            result = result + "Chance of " + name + ":\n" + lastRed + "%\n";
+            result = result + "Chance of Vitiligo" + ":\n" + lastRed + "%\n";
             String lastCor = prefs.getString("lastCor", "1.00%");
-            result = result + "Chance of " + name + ":\n" + lastCor + "%\n";
+            result = result + "Chance of Corn" +  ":\n" + lastCor + "%\n";
             resultsShow.setText(result);
             findViewById(R.id.loadingCircle).setVisibility(View.GONE);
         }
@@ -196,7 +194,7 @@ public class ResultsActivity extends AppCompatActivity {
                     cat = val;
                 }
                 else if(name.equals("red vein")){
-                    name = "Red Vein";
+                    name = "Red Eyes";
                     DatabaseReference myRef = database.getReference("redveinData");
                     myRef.push().setValue(val);
                     editor.putString("lastRed", dff.format(val));
@@ -219,6 +217,9 @@ public class ResultsActivity extends AppCompatActivity {
                 result = result + "Chance of " + name + ":\n" + dff.format(val) + "%\n";
             }
             top = sortedSymptoms.lastEntry().getValue();
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("top",top);
+            editor.commit();
             resultsShow.setText(result);
         } else {
             Toast.makeText(ResultsActivity.this, "Personal analysis failed.", Toast.LENGTH_LONG).show();

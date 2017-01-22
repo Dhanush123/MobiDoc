@@ -1,7 +1,8 @@
 package com.x10host.dhanushpatel.mobidoc;
 
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,10 +15,15 @@ public class LinkActivity extends AppCompatActivity {
     String link;
     WebView webView;
 
+    SharedPreferences prefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_link);
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+
 
         Toolbar myChildToolbar =
                 (Toolbar) findViewById(R.id.my_toolbar);
@@ -29,14 +35,14 @@ public class LinkActivity extends AppCompatActivity {
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
 
-        Intent i = getIntent();
-        String typey = i.getStringExtra("typeD");
-
+//        Intent i = getIntent();
+//        String typey = i.getStringExtra("typeD");
+        String typey = prefs.getString("top", "Cataract");
         switch (typey){
             case "Cataract":
                 link = "http://www.webmd.com/eye-health/cataracts/default.htm";
                 break;
-            case "Red Vein":
+            case "Red Eyes":
                 link = "http://www.webmd.com/eye-health/why-eyes-red";
                 break;
             case "Vitiligo":
