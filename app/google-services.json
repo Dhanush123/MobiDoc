@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "648679761537",
+    "firebase_url": "https://hackdavis17-450d4.firebaseio.com",
+    "project_id": "hackdavis17-450d4",
+    "storage_bucket": "hackdavis17-450d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648679761537:android:bc525564b2b3c2e8",
+        "android_client_info": {
+          "package_name": "com.x10host.dhanushpatel.mobidoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648679761537-h4g7uc4791q3f5qc1l07aeiq679r9qa7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.x10host.dhanushpatel.mobidoc",
+            "certificate_hash": "E77AAE7A1630E9FF89DF90F02A52004CC018E8ED"
+          }
+        },
+        {
+          "client_id": "648679761537-qqv03ccs1ga7ecmj0qo57e5v9fa2u4ep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgb9wC__OzC_G4Uk1isI_PKmCXRY9OlCo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648679761537-qqv03ccs1ga7ecmj0qo57e5v9fa2u4ep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

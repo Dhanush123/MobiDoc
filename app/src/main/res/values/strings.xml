@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MobiDoc</string>
+    <string name="action_graphs">Trends</string>
+    <string name="action_links">Medical Info</string>
+    <string name="action_map">Nearby Medical Centers</string>
+    <string name="action_call">Call Help</string>
+</resources>

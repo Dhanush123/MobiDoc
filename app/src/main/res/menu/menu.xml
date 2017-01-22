@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:id="@+id/action_call"
+        android:title="@string/action_call"
+        android:icon="@android:drawable/ic_menu_call"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_map"
+        android:title="@string/action_map"
+        android:icon="@android:drawable/ic_dialog_map"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_links"
+        android:title="@string/action_links"
+        android:icon="@android:drawable/ic_dialog_info"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_graphs"
+        android:title="@string/action_graphs"
+        android:icon="@android:drawable/ic_menu_gallery"
+        app:showAsAction="always"/>
+
+</menu>
